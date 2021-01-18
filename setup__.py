@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="sql2sheets", # Replace with your own username
+    name="sql2sheets",
     version="0.0.1",
     author="Spencer Kelly",
     author_email="spencerwellskelly@gmail.com",
@@ -18,5 +18,10 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.9',
+    python_requires='>=3.6',
+    entry_points={
+    'console_scripts': [
+        'sql2sheets = command_line:main'
+    ],
+},
 )
